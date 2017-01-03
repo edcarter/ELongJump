@@ -22,4 +22,4 @@ ret
 elongjmp: 
 mov 8(%rdi), %rsp    # set stack pointer to value saved in jmp_buf struct
 mov $1, %rax         # set return value to 1
-jmp *(%rdi)           # jump to saved pc value
+jmp *(%rdi)          # jump to saved pc value
