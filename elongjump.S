@@ -3,6 +3,7 @@
 .type esetjmp, @function
 .globl elongjmp
 .type elongjmp, @function
+
 # Parmaters
 # 
 # %rdi: address of jmp_buf struct
@@ -15,9 +16,10 @@ add $8, %rax         # add 8 to rax so it contains top of calling stack
 mov %rax, 8(%rdi)    # set jmp_buf.sp to top of calling stack
 mov $0, %rax         # set return value to 0
 ret
+
 # Parameters
 # %rdi: address of jmp_buf struct
 elongjmp: 
 mov 8(%rdi), %rsp    # set stack pointer to value saved in jmp_buf struct
 mov $1, %rax         # set return value to 1
-jmp (%rdi)           # jump to saved pc value
+jmp *(%rdi)           # jump to saved pc value
