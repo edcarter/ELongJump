@@ -10,11 +10,14 @@ void dojump()
 
 int main() 
 {
+	int a = 111;
+	register int b = 222;
+	volatile int c = 333;
 	if (esetjmp(&buf) == 0) {
-		puts("We just returned from esetjump");
+		printf("We just returned from esetjump! a=%d, b=%d, c=%d\n", a, b, c);
 		dojump();
 	} else {
-		puts("We just jumped!");
+		printf("We just jumped! a=%d, b=%d, c=%d\n", a, b, c);
 	}
 }
 

@@ -1,4 +1,4 @@
 all:
-	gcc -o longjumptest elongjump.S elongjumptest.c -Wall
+	gcc -o longjumptest elongjump.S elongjumptest.c -Wall -g
 clean:
-	rm *.o
+	rm *.o longjumptest -f
