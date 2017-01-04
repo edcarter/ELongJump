@@ -7,7 +7,7 @@ struct jmp_buf {
 	long int bp; // base pointer
 };
 
-// return 0 on intitial call and non-zero after jump
+// return 0 from initial call, and non-zero after longjump
 int esetjmp(struct jmp_buf * buf);
 
 // doesn't return

@@ -19,6 +19,7 @@ mov $0, %rax         # set return value to 0
 ret
 
 # Parameters
+#
 # %rdi: address of jmp_buf struct
 elongjmp: 
 mov 8(%rdi), %rsp    # set stack pointer to jmp_buf.sp
