@@ -2,8 +2,8 @@
 #define _ELONGJUMPH
 
 struct __attribute__ ((__packed__))  jmp_buf {
-	long int pc;
-	long int sp;
+	long int pc; // program counter
+	long int sp; // stack pointer
 	long int bp; // base pointer
 }; // pack struct to ensure safe access in assembly
 
